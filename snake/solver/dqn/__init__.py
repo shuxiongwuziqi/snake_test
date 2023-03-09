@@ -10,7 +10,8 @@ import os
 import numpy as np
 
 try:
-    import tensorflow as tf
+    import tensorflow.compat.v1 as tf
+    tf.disable_v2_behavior()
 except ImportError:
     print("*------------------------------------------------------------------------------*")
     print("| WARNING: Tensorflow 1.x is not installed. DQN testing will not be available. |")
